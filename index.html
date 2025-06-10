@@ -1,82 +1,144 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Приглашение на свадьбу | Анна & Иван</title>
-<style>
-  body { margin:0; font-family: Arial, sans-serif; color:#333; }
-  header { background:url('https://picsum.photos/1200/600?random=1') center/cover no-repeat; height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; text-align:center; }
-  header h1 { font-size:3em; margin:0; }
-  header p { font-size:1.2em; }
-  .countdown { font-size:2em; margin-top:20px; }
-  section { padding:60px 20px; max-width:800px; margin:auto; }
-  .rsvp form { display:flex; flex-direction:column; }
-  .rsvp input, .rsvp textarea, .rsvp button { margin-bottom:15px; padding:10px; font-size:1em; }
-  .gallery { display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
-  .gallery img { width:100%; height:auto; }
-  footer { text-align:center; padding:20px; font-size:0.9em; background:#f5f5f5; }
-  @media(max-width:600px){ header h1 { font-size:2em; } }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Анна & Иван — Свадьба</title>
+  <style>
+    :root {
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: Helvetica, Arial, sans-serif;
+      --color-bg: #fff9f7;
+      --color-text: #333;
+      --color-highlight: #bfa19c;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height:1.6;
+    }
+    header {
+      position:relative;
+      background: url('https://picsum.photos/1200/800?random=5') center/cover no-repeat;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+    header::after {
+      content:'';
+      position:absolute;
+      inset:0;
+      background: rgba(0,0,0,0.35);
+    }
+    .intro {
+      position:relative;
+      z-index:1;
+    }
+    .intro h1 {
+      font-family: var(--font-serif);
+      font-size: 3em;
+      color: #fff;
+      margin-bottom:0.2em;
+    }
+    .intro p {
+      font-size:1.2em;
+      color: #eee;
+      margin-bottom:0.5em;
+    }
+    .countdown {
+      font-size:2em;
+      font-family: var(--font-serif);
+      color: var(--color-highlight);
+    }
+    section {
+      padding:60px 20px;
+      max-width:600px;
+      margin:0 auto;
+      text-align:center;
+    }
+    section h2 {
+      font-family: var(--font-serif);
+      font-size:2em;
+      margin-bottom:0.5em;
+    }
+    .rsvp input, .rsvp textarea, .rsvp button {
+      width:100%;
+      padding:12px;
+      margin:10px 0;
+      border:1px solid #ccc;
+      font-size:1em;
+      font-family: var(--font-sans);
+    }
+    .rsvp button {
+      background: var(--color-highlight);
+      color:#fff;
+      border:none;
+      cursor:pointer;
+      transition: background .3s;
+    }
+    .rsvp button:hover {
+      background: #a07f77;
+    }
+    footer {
+      padding:20px;
+      text-align:center;
+      font-size:0.9em;
+      color:#777;
+    }
+    @media(max-width:600px){
+      .intro h1 { font-size:2em; }
+      .countdown { font-size:1.5em; }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <h1>Анна & Иван</h1>
-  <p>Делимся радостью — 20 сентября 2025, Алматы</p>
-  <div class="countdown" id="timer">Загрузка...</div>
+  <div class="intro">
+    <h1>Анна & Иван</h1>
+    <p>Приглашаем на нашу свадьбу</p>
+    <div class="countdown" id="timer">Загрузка...</div>
+  </div>
 </header>
 
-<section>
-  <h2>Наша история</h2>
-  <p>Мы познакомились в парке осенью...</p>
-</section>
-
-<section>
-  <h2>Программа дня</h2>
-  <ul>
-    <li>10:00 – Церемония: Центральный парк, Алматы</li>
-    <li>12:00 – Фотосессия</li>
-    <li>14:00 – Банкет: Ресторан «Алматы»</li>
-  </ul>
-</section>
-
-<section class="gallery">
-  <h2>Галерея</h2>
-  <div class="gallery">
-    <img src="https://picsum.photos/300/200?random=2" alt="">
-    <img src="https://picsum.photos/300/200?random=3" alt="">
-    <img src="https://picsum.photos/300/200?random=4" alt="">
-  </div>
+<section class="details">
+  <h2>📅 Дата & Место</h2>
+  <p><strong>20 сентября 2025</strong><br>Центральный парк, Алматы<br>Начало в 10:00</p>
 </section>
 
 <section class="rsvp">
   <h2>RSVP</h2>
   <form>
     <input type="text" name="name" placeholder="Ваше имя" required>
-    <input type="email" name="email" placeholder="E‑mail" required>
-    <textarea name="message" placeholder="Сообщение (необязательно)" rows="4"></textarea>
-    <button type="submit">Отправить</button>
+    <input type="email" name="email" placeholder="Ваш E‑mail" required>
+    <textarea name="message" placeholder="Желаемое/вопрос (не обяз.)" rows="3"></textarea>
+    <button type="submit">Отправить RSVP</button>
   </form>
 </section>
 
 <footer>
-  © 2025 Анна & Иван. Мы вас очень ждём!
+  © 2025 Анна & Иван — Ценим вашу поддержку!
 </footer>
 
 <script>
-  function updateTimer() {
+  function updateTimer(){
     const target = new Date('2025-09-20T10:00:00');
-    const now = new Date();
-    const diff = target - now;
-    if (diff < 0) { document.getElementById('timer').textContent = 'Событие началось!'; return; }
-    const d = Math.floor(diff / 864e5),
-          h = Math.floor(diff % 864e5 / 36e5),
-          m = Math.floor(diff % 36e5 / 6e4),
-          s = Math.floor(diff % 6e4 / 1000);
+    const diff = target - new Date();
+    if(diff<0){
+      document.getElementById('timer').textContent = 'Событие уже началось!';
+      return;
+    }
+    const d = Math.floor(diff/864e5),
+          h = Math.floor(diff%864e5/36e5),
+          m = Math.floor(diff%36e5/6e4),
+          s = Math.floor(diff%6e4/1000);
     document.getElementById('timer').textContent = `${d}д ${h}ч ${m}м ${s}с`;
   }
-  setInterval(updateTimer, 1000);
+  setInterval(updateTimer,1000);
   updateTimer();
 </script>
 
