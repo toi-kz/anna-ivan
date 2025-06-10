@@ -2,145 +2,106 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Анна & Иван — Свадьба</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Day — Айжан & Нұржан</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --font-serif: 'Playfair Display', serif;
-      --font-sans: Helvetica, Arial, sans-serif;
-      --color-bg: #fff9f7;
-      --color-text: #333;
-      --color-highlight: #bfa19c;
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      font-family: var(--font-sans);
-      background: var(--color-bg);
-      color: var(--color-text);
-      line-height:1.6;
+      font-family: 'Caveat', cursive;
+      background: #fdfdfd;
+      margin: 0;
+      padding: 0;
+      color: #333;
     }
-    header {
-      position:relative;
-      background: url('https://picsum.photos/1200/800?random=5') center/cover no-repeat;
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
+    .container {
+      max-width: 420px;
+      margin: auto;
+      padding: 20px;
     }
-    header::after {
-      content:'';
-      position:absolute;
-      inset:0;
-      background: rgba(0,0,0,0.35);
+    img.hero {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 20px;
     }
-    .intro {
-      position:relative;
-      z-index:1;
+    h1, h2 {
+      text-align: center;
     }
-    .intro h1 {
-      font-family: var(--font-serif);
-      font-size: 3em;
-      color: #fff;
-      margin-bottom:0.2em;
+    .section {
+      margin-bottom: 30px;
     }
-    .intro p {
-      font-size:1.2em;
-      color: #eee;
-      margin-bottom:0.5em;
+    .highlight {
+      font-weight: bold;
     }
-    .countdown {
-      font-size:2em;
-      font-family: var(--font-serif);
-      color: var(--color-highlight);
-    }
-    section {
-      padding:60px 20px;
-      max-width:600px;
-      margin:0 auto;
-      text-align:center;
-    }
-    section h2 {
-      font-family: var(--font-serif);
-      font-size:2em;
-      margin-bottom:0.5em;
-    }
-    .rsvp input, .rsvp textarea, .rsvp button {
-      width:100%;
-      padding:12px;
-      margin:10px 0;
-      border:1px solid #ccc;
-      font-size:1em;
-      font-family: var(--font-sans);
-    }
-    .rsvp button {
-      background: var(--color-highlight);
-      color:#fff;
-      border:none;
-      cursor:pointer;
-      transition: background .3s;
-    }
-    .rsvp button:hover {
-      background: #a07f77;
+    .color-sample {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      border: 1px solid #ccc;
     }
     footer {
-      padding:20px;
-      text-align:center;
-      font-size:0.9em;
-      color:#777;
-    }
-    @media(max-width:600px){
-      .intro h1 { font-size:2em; }
-      .countdown { font-size:1.5em; }
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Wedding Day</h1>
+    <h2>Айжан & Нұржан</h2>
 
-<header>
-  <div class="intro">
-    <h1>Анна & Иван</h1>
-    <p>Приглашаем на нашу свадьбу</p>
-    <div class="countdown" id="timer">Загрузка...</div>
+    <img class="hero" src="https://picsum.photos/400/300?random=1" alt="Пара">
+
+    <div class="section">
+      <h2>День свадьбы: 12 шілде 2025</h2>
+      <p>Құрметті қонақтар! Сіздерді біздің қуанышымызбен бөлісуге шақырамыз. Бұл күн махаббат пен шаттыққа толы болады!</p>
+    </div>
+
+    <div class="section">
+      <h2>Тайминг</h2>
+      <p>16:00–16:30 — Қонақтарды қарсы алу</p>
+      <p>16:30–17:00 — Үйлену салтанаты</p>
+      <p>17:00 — Банкет және бағдарлама</p>
+    </div>
+
+    <div class="section">
+      <h2>Дресс-код</h2>
+      <p><span class="highlight">Қыздар:</span> 
+        <span class="color-sample" style="background:#e5d8ca"></span>
+        <span class="color-sample" style="background:#f3e4e1"></span>
+        <span class="color-sample" style="background:#e0c6cb"></span>
+        Ақ түсті қалыңдыққа қалдырыңыз 💍
+      </p>
+      <p><span class="highlight">Жігіттер:</span> Ақ көйлек міндетті емес, бірақ қош көріледі 👔</p>
+    </div>
+
+    <div class="section">
+      <h2>Локация</h2>
+      <p>Демалыс орны "Гран-При"<br>Қарасай ауданы, Приозерная көшесі, 8</p>
+      <p><a href="#">Картадан қарау</a></p>
+    </div>
+
+    <div class="section">
+      <h2>Сыйлықтар мен гүлдер</h2>
+      <p>Біздің ең үлкен сыйлығымыз — сіздің қатысуыңыз! Қаласаңыз, ақшалай конверт те қабылданады. Ал гүлдерден бас тартсақ дейміз 🌸</p>
+    </div>
+
+    <div class="section">
+      <h2>Келесі күн</h2>
+      <p>13 шілде күні де жақындармен кездесіп, тағы бір рет қуаныш бөлісеміз! Толық мекенжай кейінірек беріледі.</p>
+    </div>
+
+    <div class="section">
+      <h2>Байланыс</h2>
+      <p>Ұйымдастырушы Аружан: +7 700 000 00 00</p>
+    </div>
+
+    <footer>
+      Біз сіздерді асыға күтеміз! 💖
+    </footer>
   </div>
-</header>
-
-<section class="details">
-  <h2>📅 Дата & Место</h2>
-  <p><strong>20 сентября 2025</strong><br>Центральный парк, Алматы<br>Начало в 10:00</p>
-</section>
-
-<section class="rsvp">
-  <h2>RSVP</h2>
-  <form>
-    <input type="text" name="name" placeholder="Ваше имя" required>
-    <input type="email" name="email" placeholder="Ваш E‑mail" required>
-    <textarea name="message" placeholder="Желаемое/вопрос (не обяз.)" rows="3"></textarea>
-    <button type="submit">Отправить RSVP</button>
-  </form>
-</section>
-
-<footer>
-  © 2025 Анна & Иван — Ценим вашу поддержку!
-</footer>
-
-<script>
-  function updateTimer(){
-    const target = new Date('2025-09-20T10:00:00');
-    const diff = target - new Date();
-    if(diff<0){
-      document.getElementById('timer').textContent = 'Событие уже началось!';
-      return;
-    }
-    const d = Math.floor(diff/864e5),
-          h = Math.floor(diff%864e5/36e5),
-          m = Math.floor(diff%36e5/6e4),
-          s = Math.floor(diff%6e4/1000);
-    document.getElementById('timer').textContent = `${d}д ${h}ч ${m}м ${s}с`;
-  }
-  setInterval(updateTimer,1000);
-  updateTimer();
-</script>
-
 </body>
 </html>
